@@ -1,25 +1,38 @@
 #pragma once
 #include <string>
+#include <iostream>
 
 namespace qs {
-	void print1(std::string in1);
-	void print2(std::string in1, std::string in2);
-	void print3(std::string in1, std::string in2, std::string in3);
-	void print4(std::string in1, std::string in2, std::string in3, std::string in4);
-	void print5(std::string in1, std::string in2, std::string in3, std::string in4, std::string in5);
+	template<typename... Args>
+	void print(Args... args) {
+		(std::cout << ... << args);
+	}
+	template<typename... Args>
+	void println(Args... args) {
+		(std::cout << ... << args);
+		std::cout << '\n';
+	}
 	int randInt(int min, int max);
 	float randFloat(float min, float max);
 	bool randBool();
-	void getInt(int in);
-	void getStr(std::string in);
-	void getChar(char in);
-	void getFloat(float in);
+	void getInt(int& in);
+	void getStr(std::string& in);
+	void getChar(char& in);
+	void getFloat(float& in);
 	template <typename var>
-	int toInt(var in);
+	int toInt(var& in) {
+		return ToInt(in);
+	}
 	template <typename var>
-	std::string toStr(var in);
+	std::string toStr(var& in) {
+		return std::to_string(in);
+	}
 	template <typename var>
-	char toChar(var in);
+	char toChar(var& in) {
+		return ToChar(in);
+	}
 	template <typename var>
-	float toFloat(var& in);
+	float toFloat(var& in) {
+		return ToFloat(in);
+	}
 }
