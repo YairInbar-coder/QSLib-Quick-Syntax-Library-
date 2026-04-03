@@ -1,5 +1,5 @@
 # QSLib-Quick-Syntax-Library-
-The Quick Syntax Library Makes Basic C++ Stuff Simpler For Example std::cout << "text" << std::endl; becomes qs::print1("text")
+The Quick Syntax Library Makes Basic C++ Stuff Simpler For Example std::cout << "text"; becomes qs::print("text")
 
 HOW TO INSTALL:
 step 1: extract the zip file
