@@ -10,11 +10,11 @@ step 5: go to linker → input → additional dependencies and type qsLib.lib;
 step 6: in the code #include <QuickSyntax.h> and test the library
 
 List Of Functions:
-// output
+output:
 print(), println()
-// input
+input:
 getInt(), getStr(), getFloat(), getChar()
-// random
+random:
 randInt(), randFloat(), randBool()
-// casting
+casting:
 toInt(), toStr(), toFloat(), toChar()
